@@ -1,0 +1,15 @@
+server:
+  port: 8030
+  
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: catalogRoute
+          uri: lb://catalog-service
+          predicates:
+            - Path=/catalog/**
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

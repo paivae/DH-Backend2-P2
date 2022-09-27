@@ -1,0 +1,33 @@
+server:
+  port: 8033
+spring:
+  eureka:
+    client:
+      service-url:
+        defaultZone: http://localhost:8761/eureka
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  zipkin:
+    baseUrl: http://localhost:9411/
+    ensbled: true
+    sender:
+      type: rabbit
+  sleuth:
+    sampler:
+      probability: 1.0
+  data:
+    mongodb:
+      authentication-database: admin
+      username: backtest
+      password: backtest
+      database: series
+      port: 27017
+      host: localhost
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create-drop
+    
