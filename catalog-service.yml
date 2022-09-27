@@ -23,7 +23,7 @@ spring:
     password: guest
   zipkin:
     baseUrl: http://localhost:9411/
-    ensbled: true
+    enabled: true
     sender:
       type: rabbit
   jpa:
